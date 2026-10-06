@@ -53,27 +53,27 @@ Branch: `feature/initial-setup`
 - [x] Add `.nojekyll`
 - [x] Write `PLAN.md`; commit `CLAUDE.md`
 - [x] Commit with co-author trailer
-- [ ] Push branch and open the first PR (web UI)
-- [ ] Merge the first PR
+- [x] Push branch and open the first PR (web UI) — PR #2
+- [x] Merge the first PR
 - [ ] Enable Pages: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**
-- [ ] Confirm the site URL responds (shows README until `index.html` exists)
+- [ ] Confirm the site URL responds (404 until `index.html` is merged in Phase 2)
 
 ## Phase 2: Base Multi-Page Layout
 Branch: `feature/base-layout`
 
-- [ ] Shared page shell used by all four pages:
+- [x] Shared page shell used by all four pages:
   - `<header>` with site name and `<nav>` (links to all pages, `aria-current="page"` on the active one)
   - Skip link to `<main id="main">`
   - `<footer>` with copyright and social links
-- [ ] `assets/css/style.css`:
+- [x] `assets/css/style.css`:
   - Design tokens on `:root` (colors, spacing, type scale, radii)
   - Dark, high-contrast palette (text ≥ 4.5:1 contrast)
   - Mobile-first layout with breakpoints around 640px and 1024px
-  - Responsive nav (collapses to a menu toggle on small screens, minimal JS with `aria-expanded`)
+  - Responsive nav: four links fit at 375px, so it wraps under the site name instead of using a JS menu toggle
   - Visible `:focus-visible` styles; `prefers-reduced-motion` respected
-- [ ] `index.html` content: short bio, 2–3 featured projects, high-level tech stack, quick links
-- [ ] Stub `projects.html`, `about.html`, `contact.html` with the shared shell
-- [ ] Shared `<head>`: charset, viewport, title, meta description, favicon
+- [x] `index.html` content: short bio, 3 featured projects, tech stack, quick links (bio and stack marked `TODO(Malcolm)` for review)
+- [x] Stub `projects.html`, `about.html`, `contact.html` with the shared shell
+- [x] Shared `<head>`: charset, viewport, title, meta description, favicon (`assets/icons/favicon.svg`)
 
 ## Phase 3: Projects Page with YouTube Embeds & SVG Icons
 Branch: `feature/projects-page`
@@ -116,8 +116,8 @@ Branch: `feature/polish`
 
 | Badge | Requirement | How this project earns it | Status |
 |---|---|---|---|
-| **Pull Shark** | 2 merged PRs (Bronze 16, Silver 128) | One PR per phase gives 4–5 merged PRs | [ ] Base (0/2) |
-| **YOLO** | Merge a PR without a review | Merge the first PR ourselves | [ ] |
+| **Pull Shark** | 2 merged PRs (Bronze 16, Silver 128) | One PR per phase gives 4–5 merged PRs | [ ] Base (1/2) |
+| **YOLO** | Merge a PR without a review | Merge the first PR ourselves | [x] PR #2 (check profile) |
 | **Quickdraw** | Close an issue or PR within 5 minutes of opening it | Open a small issue, then close it within 5 minutes (via a `Closes #N` merge or manually) | [ ] |
 | **Pair Extraordinaire** | Co-authored commit in a merged PR (Bronze 10, Silver 24, Gold 48) | Every commit carries the `Co-authored-by` trailer | [ ] Base (0/1) |
 | Starstruck | Repo reaches 16 stars | Opportunistic, not in our control | – |
