@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Malcolm Zartman · Data scientist and developer</title>
+  <meta name="description" content="Malcolm Zartman is a data scientist and developer working on synthetic data for computer vision, data pipelines, and analytics tools.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="index.html">Malcolm Zartman</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <h1 id="hero-title">Malcolm Zartman</h1>
+          <!-- TODO(Malcolm): review this bio and adjust the wording to your own voice. -->
+          <p class="lede">Data scientist and developer. I study how synthetic training data carries over to real-world computer vision, and I build the data pipelines and analytics tools around that kind of work.</p>
+          <ul class="actions">
+            <li><a class="button button-primary" href="projects.html">See projects</a></li>
+            <li><a class="button" href="https://github.com/MalcolmZyx">GitHub profile</a></li>
+            <li><a class="button" href="contact.html">Get in touch</a></li>
+          </ul>
+        </div>
+
+        <figure class="hero-figure">
+          <svg viewBox="0 0 640 360" role="img" aria-labelledby="scene-title scene-desc">
+            <title id="scene-title">Street scene as a segmentation mask</title>
+            <desc id="scene-desc">A flat-color street scene where each color marks one object class: blue sky, grey buildings, green trees, a purple road, magenta sidewalks, a dark blue car, a red pedestrian and a yellow traffic sign.</desc>
+            <!-- sky -->
+            <rect width="640" height="200" fill="#4682b4"/>
+            <!-- buildings -->
+            <path fill="#464646" d="M0 70h60V40h85v160H0zM470 85h55V30h115v170H470zM235 160h30v-28h40v58h-70zM340 150h45v40h-45z"/>
+            <!-- vegetation -->
+            <circle cx="185" cy="158" r="42" fill="#6b8e23"/>
+            <circle cx="228" cy="172" r="28" fill="#6b8e23"/>
+            <circle cx="430" cy="165" r="36" fill="#6b8e23"/>
+            <!-- terrain -->
+            <path fill="#98fb98" d="M0 190h640v170H0z"/>
+            <!-- sidewalks -->
+            <path fill="#f423e8" d="M0 290 300 190h8L70 360H0zM640 300 340 190h-8l262 170h46z"/>
+            <!-- road -->
+            <path fill="#804080" d="M308 190h24l262 170H70z"/>
+            <!-- pole and traffic sign -->
+            <rect x="548" y="160" width="5" height="128" fill="#999999"/>
+            <rect x="536" y="138" width="29" height="24" fill="#dcdc00"/>
+            <!-- car -->
+            <path fill="#00008e" d="M372 262h66l18 20h22l4 40H346l4-40h6z"/>
+            <!-- person -->
+            <circle cx="100" cy="262" r="8" fill="#dc143c"/>
+            <path fill="#dc143c" d="M92 272h16l3 34h-6l-4 30h-6l-3-30h-4z"/>
+          </svg>
+          <figcaption>A street drawn the way a segmentation model sees it: one color per object class.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 id="work-title">Selected work</h2>
+        <ul class="project-list">
+          <li>
+            <article class="project">
+              <header>
+                <h3>The Critical Realism Threshold</h3>
+                <p class="project-context">Research with Evan Petersen and Muhammad Lutfor Rahman</p>
+              </header>
+              <p>How much visual realism does synthetic driving data need before it stops helping real-world perception? We trained detectors on three simulators (Synscapes, UrbanSyn and RealDriveSim) under matched data budgets to find out.</p>
+              <p class="project-stack">PyTorch, Ultralytics YOLO, OpenCV, MLflow, Weights &amp; Biases</p>
+              <p><a href="projects.html">Read more on the projects page</a></p>
+            </article>
+          </li>
+          <li>
+            <article class="project">
+              <header>
+                <h3><a href="https://github.com/bjiby02/ROSS">CaseLight</a></h3>
+                <p class="project-context">Swans Applied AI Hackathon, October 2026</p>
+              </header>
+              <p>Reads a personal-injury case from Clio and turns every note, email and document into a 90-second brief for the attorney, plus a separate view for the providers treating the client.</p>
+              <p class="project-stack">Node.js, Claude API, Docker</p>
+              <p><a href="https://github.com/bjiby02/ROSS">View the code on GitHub</a></p>
+            </article>
+          </li>
+          <li>
+            <article class="project">
+              <header>
+                <h3><a href="https://github.com/MalcolmZyx/YouTube-Tool">YT Analytics Studio</a></h3>
+                <p class="project-context">Personal project</p>
+              </header>
+              <p>Two exploratory Jupyter notebooks rebuilt as a web app for YouTube channel analytics: calendar heatmaps of views, tag scores that compare top and bottom performers, and how video length relates to views.</p>
+              <p class="project-stack">Python, Flask, pandas, React, Recharts</p>
+              <p><a href="https://github.com/MalcolmZyx/YouTube-Tool">View the code on GitHub</a></p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="stack-title">
+      <div class="wrap">
+        <h2 id="stack-title">Tools I use</h2>
+        <!-- TODO(Malcolm): adjust to the tools you want to be hired for. -->
+        <dl class="stack">
+          <div>
+            <dt>Languages</dt>
+            <dd>Python, JavaScript, C#</dd>
+          </div>
+          <div>
+            <dt>Machine learning and vision</dt>
+            <dd>PyTorch, Ultralytics YOLO, scikit-learn, OpenCV</dd>
+          </div>
+          <div>
+            <dt>Data and experiments</dt>
+            <dd>pandas, NumPy, MLflow, Weights &amp; Biases</dd>
+          </div>
+          <div>
+            <dt>Web and apps</dt>
+            <dd>Flask, React, Node.js</dd>
+          </div>
+          <div>
+            <dt>Engineering</dt>
+            <dd>Git, Docker, pytest</dd>
+          </div>
+          <div>
+            <dt>Games</dt>
+            <dd>Unity</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="links-title">
+      <div class="wrap">
+        <h2 id="links-title">Find me online</h2>
+        <!-- TODO(Malcolm): add LinkedIn, itch.io and email once you choose what to make public. -->
+        <ul class="link-list">
+          <li><a href="https://github.com/MalcolmZyx">GitHub</a></li>
+          <li><a href="contact.html">Contact page</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Malcolm Zartman</p>
+      <ul>
+        <li><a href="https://github.com/MalcolmZyx">GitHub</a></li>
+        <li><a href="https://github.com/MalcolmZyx/MalcolmZyx.github.io">Site source</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
