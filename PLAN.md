@@ -1,27 +1,33 @@
 # Portfolio Build Plan
 
-A multi-page static portfolio hosted on GitHub Pages, built phase by phase through feature branches and pull requests so that the development history also earns GitHub profile achievements. Rules and standards live in [`CLAUDE.md`](CLAUDE.md); this file is the roadmap.
+A one-page static portfolio hosted on GitHub Pages, built through feature branches and pull requests so that the development history also earns GitHub profile achievements. Rules and standards live in [`CLAUDE.md`](CLAUDE.md); this file is the roadmap.
 
 ## Overview
 
 | | |
 |---|---|
-| **Stack** | Vanilla HTML5, vanilla CSS (custom properties, no build step), minimal vanilla JS |
+| **Stack** | Vanilla HTML5, vanilla CSS (custom properties, no build step), small vanilla JS |
 | **Hosting** | GitHub Pages, served from `main` branch root (`.nojekyll` so files are served as-is) |
-| **Pages** | `index.html`, `projects.html`, `about.html`, `contact.html` |
-| **Assets** | `assets/css/` (one stylesheet), `assets/icons/` (SVG), `assets/images/` |
-| **Theme** | Dark, high contrast, mobile-first, accessible |
+| **Page** | `index.html`, one scrolling page: Hero, Experience, Skills, Projects, About, Contact |
+| **Design** | YouTube-familiar system: Roboto, neutral grays, pill buttons, 16:9 thumbnails, filter chips. Dark by default, light when the visitor's system prefers it |
 
 ```
 MalcolmZyx.github.io/
-├── index.html          Landing: bio, featured projects, tech stack, quick links
-├── projects.html       Project showcase: YouTube demos, architecture notes, links
-├── about.html          Background, goals, career aspirations
-├── contact.html        Contact info, social links, resume download
+├── index.html                 The whole site
+├── about.html, contact.html,  Redirects to the matching home-page sections
+│   projects.html
 ├── assets/
 │   ├── css/style.css
-│   ├── icons/          Simple Icons / Lucide SVGs
-│   └── images/
+│   ├── js/projects.js         Project data (edit this to add or change projects)
+│   ├── js/main.js             Grid, filters, project panel, carousel
+│   ├── icons/                 favicon.svg, tech/ (Simple Icons for the Skills section)
+│   ├── images/
+│   │   ├── headshot*.{jpg,webp}
+│   │   ├── projects/<slug>.jpg           Cover thumbnails (16:9)
+│   │   ├── projects/<slug>-preview.mp4   Optional hover preview
+│   │   ├── experience/<name>.svg|png     Optional company logos (else monogram)
+│   │   └── about/<name>.jpg              Optional "Beyond the code" photos (4:3)
+│   └── malcolm-zartman-resume.pdf
 ├── .nojekyll
 ├── CLAUDE.md
 ├── PLAN.md
@@ -55,8 +61,8 @@ Branch: `feature/initial-setup`
 - [x] Commit with co-author trailer
 - [x] Push branch and open the first PR (web UI) — PR #2
 - [x] Merge the first PR
-- [ ] Enable Pages: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**
-- [ ] Confirm the site URL responds (404 until `index.html` is merged in Phase 2)
+- [x] Enable Pages: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**
+- [x] Confirm the site URL responds
 
 ## Phase 2: Base Multi-Page Layout
 Branch: `feature/base-layout`
@@ -75,33 +81,32 @@ Branch: `feature/base-layout`
 - [x] Stub `projects.html`, `about.html`, `contact.html` with the shared shell
 - [x] Shared `<head>`: charset, viewport, title, meta description, favicon (`assets/icons/favicon.svg`)
 
-## Phase 3: Projects Page with YouTube Embeds & SVG Icons
-Branch: `feature/projects-page`
+## Phase 3: Content update
+Branch: `feature/content-update`
 
-- [ ] One `<article>` per project: title, summary, role, tech stack, architecture notes, links (repo / live / itch.io)
-- [ ] YouTube demos, either:
-  - `<lite-youtube>` web component (loads the player only on click), **or**
-  - `<iframe loading="lazy" title="…">` inside an `aspect-ratio: 16 / 9` wrapper
-- [ ] Tech-stack SVG icons from [Simple Icons](https://simpleicons.org) saved in `assets/icons/`; decorative icons get `aria-hidden="true"` next to a visible text label
-- [ ] Project screenshots in `assets/images/` with descriptive `alt` text and `loading="lazy"`
-- [ ] Featured projects on `index.html` link to their entries on `projects.html`
+- [x] Bio and skills rewritten from LinkedIn, GitHub and resume
+- [x] Email, LinkedIn and itch.io links published
 
-## Phase 4: About & Contact Pages
-Branch: `feature/about-contact`
+## Phase 4: One-page redesign
+Branch: `feature/redesign`
 
-- [ ] `about.html`: background, education, goals, career aspirations, optional photo (`alt` text)
-- [ ] `contact.html`:
-  - Email (`mailto:`) and social links (GitHub, LinkedIn, itch.io, YouTube) with [Lucide](https://lucide.dev) / Simple Icons SVGs and `aria-label`s
-  - Resume PDF in `assets/` with a download link (`download` attribute)
-- [ ] Footer social links reuse the same icons
+- [x] YouTube-inspired design system (chosen from three mockups)
+- [x] Hero: headshot, one-sentence summary, key facts, Email / LinkedIn / GitHub, Resume in the masthead
+- [x] Experience (right after the hero): employers with grouped roles, metrics first, "Show more" for full bullets, education and AWS certification cards
+- [x] Skills: six groups with Simple Icons where available
+- [x] Projects: filterable grid driven by `assets/js/projects.js`, result badges on thumbnails
+- [x] Project panel (`<dialog>`): media carousel (videos and images), details, previous/next, "More projects", shareable `#slug` links, Back button closes it
+- [x] About: short bio plus "Beyond the code" tiles with optional photos
+- [x] Contact footer
+- [x] Old pages redirect to their new sections
+- [ ] Add project thumbnails, extra carousel images and demo videos as they're ready
+- [ ] Optional: company logos and About photos
 
-## Phase 5: Polish & QA (optional)
+## Phase 5: Polish & QA
 Branch: `feature/polish`
 
-- [ ] Accessibility pass: keyboard-only navigation, contrast, alt text, heading order
 - [ ] Lighthouse audit (Performance, Accessibility, Best Practices, SEO)
-- [ ] Open Graph / Twitter meta tags and a social preview image
-- [ ] Favicon set
+- [ ] Social preview image (1200x630) for link sharing
 - [ ] Update `README.md` with a description and live-site link
 
 ### Definition of done (every phase)
@@ -116,17 +121,18 @@ Branch: `feature/polish`
 
 | Badge | Requirement | How this project earns it | Status |
 |---|---|---|---|
-| **Pull Shark** | 2 merged PRs (Bronze 16, Silver 128) | One PR per phase gives 4–5 merged PRs | [ ] Base (1/2) |
-| **YOLO** | Merge a PR without a review | Merge the first PR ourselves | [x] PR #2 (check profile) |
-| **Quickdraw** | Close an issue or PR within 5 minutes of opening it | Open a small issue, then close it within 5 minutes (via a `Closes #N` merge or manually) | [ ] |
-| **Pair Extraordinaire** | Co-authored commit in a merged PR (Bronze 10, Silver 24, Gold 48) | Every commit carries the `Co-authored-by` trailer | [ ] Base (0/1) |
+| **Pull Shark** | 2 merged PRs (Bronze 16, Silver 128) | One PR per phase gives 4–5 merged PRs | [x] Base (2/2), PRs #2 and #4; awaiting badge |
+| **YOLO** | Merge a PR without a review | Merge the first PR ourselves | [x] Earned |
+| **Quickdraw** | Close an issue or PR within 5 minutes of opening it | Open a small issue, then close it within 5 minutes (via a `Closes #N` merge or manually) | [x] Earned |
+| **Pair Extraordinaire** | Co-authored commit in a merged PR (Bronze 10, Silver 24, Gold 48) | Every commit carries the `Co-authored-by` trailer | [x] Base (1/1); awaiting badge |
 | Starstruck | Repo reaches 16 stars | Opportunistic, not in our control | – |
 | Galaxy Brain | 2 accepted answers in GitHub Discussions | Out of scope for this repo | – |
 | Public Sponsor | Sponsor someone via GitHub Sponsors | Out of scope | – |
 
-> **Pair Extraordinaire caveat:** GitHub only counts a co-author whose email is linked to a GitHub account. Whether `noreply@anthropic.com` qualifies is **unverified**. After the first PR merges, check the Achievements section of the GitHub profile. If the badge doesn't appear within a day, the fallback is to co-author with a real collaborator's GitHub noreply address (`<ID>+<username>@users.noreply.github.com`, shown on their account's email settings).
+> **Pair Extraordinaire caveat:** GitHub only counts a co-author whose email is linked to a GitHub account. GitHub resolves `noreply@anthropic.com` to the `claude` account (verified on this repo's commit pages), so co-authored commits should count; count-based badges can take days to appear. If it never shows up, the fallback is to co-author with a real collaborator's GitHub noreply address (`<ID>+<username>@users.noreply.github.com`, shown on their account's email settings).
 
 ### Progress log
 | Date | PR / Issue | Badge progress |
 |---|---|---|
-| | | |
+| 2026-10-06 | Issue #1, PR #2 | YOLO, Quickdraw |
+| 2026-10-06 | Issue #3, PR #4 | Pull Shark and Pair Extraordinaire requirements met |
