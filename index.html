@@ -4,172 +4,360 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Malcolm Zartman · Data scientist</title>
-  <meta name="description" content="Malcolm Zartman is a junior data scientist building ETL pipelines, predictive ML models and data products. Open to data science, data engineering and software engineering roles.">
+  <meta name="description" content="Malcolm Zartman is a junior data scientist at HealthSpanIQ building feature selection pipelines, ETL systems and predictive models. Open to data science, data engineering and software engineering roles.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Malcolm Zartman · Data scientist">
+  <meta property="og:description" content="Junior data scientist. AWS Certified ML Engineer – Associate. Projects in machine learning, data engineering and software.">
+  <meta property="og:url" content="https://malcolmzyx.github.io/">
+  <meta property="og:image" content="https://malcolmzyx.github.io/assets/images/headshot.jpg">
+  <meta name="color-scheme" content="dark light">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Record images that fail before main.js loads, so it can apply fallbacks.
+    document.addEventListener("error", function (e) {
+      if (e.target.tagName === "IMG") (window.__brokenImgs = window.__brokenImgs || []).push(e.target);
+    }, true);
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="masthead">
     <div class="wrap">
-      <a class="site-name" href="index.html">Malcolm Zartman</a>
-      <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="#top"><img src="assets/images/headshot-400.webp" alt="" width="32" height="32">Malcolm Zartman</a>
+      <nav class="site-nav" aria-label="Sections">
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <a class="pill pill-primary" href="assets/malcolm-zartman-resume.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap">
         <div>
           <h1 id="hero-title">Malcolm Zartman</h1>
-          <p class="lede">Junior data scientist at a health-tech startup, where I take data products from zero to one: automated ETL pipelines, feature selection, predictive models and the containerized APIs that serve them.</p>
-          <p class="hero-note">Computer Science graduate, class of 2026. AWS Certified Machine Learning Engineer – Associate. Open to full-time roles in data science, data engineering and software engineering.</p>
-          <ul class="actions">
-            <li><a class="button button-primary" href="projects.html">See projects</a></li>
-            <li><a class="button" href="https://www.linkedin.com/in/malcolm-zartman">LinkedIn</a></li>
-            <li><a class="button" href="https://github.com/MalcolmZyx">GitHub</a></li>
+          <p class="lede"><strong>Junior data scientist</strong> at HealthSpanIQ, a health-tech startup. I build feature selection pipelines, ETL systems and predictive models, and I'm looking for full-time roles in data science, data engineering and software engineering.</p>
+          <ul class="facts">
+            <li><strong>AWS Certified</strong> ML Engineer – Associate</li>
+            <li><strong>B.S. Computer Science</strong>, CSUSM, Summa Cum Laude</li>
+            <li><strong>San Diego</strong>, CA</li>
+          </ul>
+          <ul class="pills">
+            <li><a class="pill pill-primary" href="mailto:mjzartman@gmail.com">Email me</a></li>
+            <li><a class="pill" href="https://www.linkedin.com/in/malcolm-zartman">LinkedIn</a></li>
+            <li><a class="pill" href="https://github.com/MalcolmZyx">GitHub</a></li>
           </ul>
         </div>
-
-        <figure class="hero-figure">
-          <svg viewBox="0 0 640 360" role="img" aria-labelledby="scene-title scene-desc">
-            <title id="scene-title">Street scene as a segmentation mask</title>
-            <desc id="scene-desc">A flat-color street scene where each color marks one object class: blue sky, grey buildings, green trees, a purple road, magenta sidewalks, a dark blue car, a red pedestrian and a yellow traffic sign.</desc>
-            <!-- sky -->
-            <rect width="640" height="200" fill="#4682b4"/>
-            <!-- buildings -->
-            <path fill="#464646" d="M0 70h60V40h85v160H0zM470 85h55V30h115v170H470zM235 160h30v-28h40v58h-70zM340 150h45v40h-45z"/>
-            <!-- vegetation -->
-            <circle cx="185" cy="158" r="42" fill="#6b8e23"/>
-            <circle cx="228" cy="172" r="28" fill="#6b8e23"/>
-            <circle cx="430" cy="165" r="36" fill="#6b8e23"/>
-            <!-- terrain -->
-            <path fill="#98fb98" d="M0 190h640v170H0z"/>
-            <!-- sidewalks -->
-            <path fill="#f423e8" d="M0 290 300 190h8L70 360H0zM640 300 340 190h-8l262 170h46z"/>
-            <!-- road -->
-            <path fill="#804080" d="M308 190h24l262 170H70z"/>
-            <!-- pole and traffic sign -->
-            <rect x="548" y="160" width="5" height="128" fill="#999999"/>
-            <rect x="536" y="138" width="29" height="24" fill="#dcdc00"/>
-            <!-- car -->
-            <path fill="#00008e" d="M372 262h66l18 20h22l4 40H346l4-40h6z"/>
-            <!-- person -->
-            <circle cx="100" cy="262" r="8" fill="#dc143c"/>
-            <path fill="#dc143c" d="M92 272h16l3 34h-6l-4 30h-6l-3-30h-4z"/>
-          </svg>
-          <figcaption>A street drawn the way a segmentation model sees it: one color per object class.</figcaption>
-        </figure>
+        <img class="hero-photo" src="assets/images/headshot-800.webp" srcset="assets/images/headshot-400.webp 400w, assets/images/headshot-800.webp 800w" sizes="(min-width: 900px) 280px, 140px" alt="Malcolm Zartman" width="280" height="280">
       </div>
     </section>
 
-    <section class="section" aria-labelledby="work-title">
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
       <div class="wrap">
-        <h2 id="work-title">Selected work</h2>
-        <ul class="project-list">
-          <li>
-            <article class="project">
-              <header>
-                <h3>The Critical Realism Threshold</h3>
-                <p class="project-context">Research with Evan Petersen and Muhammad Lutfor Rahman</p>
-              </header>
-              <p>How much visual realism does synthetic driving data need before it stops helping real-world perception? We trained detectors on three simulators (Synscapes, UrbanSyn and RealDriveSim) under matched data budgets to find out.</p>
-              <p class="project-stack">PyTorch, Ultralytics YOLO, OpenCV, MLflow, Weights &amp; Biases</p>
-              <p><a href="projects.html">Read more on the projects page</a></p>
-            </article>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title" id="experience-title">Experience</h2>
+          </div>
+          <a class="pill" href="assets/malcolm-zartman-resume.pdf" target="_blank" rel="noopener">Full resume (PDF)</a>
+        </div>
+
+        <ul class="employers">
+          <li class="employer">
+            <!-- Logo: add assets/images/experience/healthspaniq.svg (or .png) to replace the monogram. -->
+            <div class="logo" style="--logo-bg:#1f6f5c" aria-hidden="true">HS<img src="assets/images/experience/healthspaniq.svg" alt=""></div>
+            <div>
+              <div class="employer-head">
+                <h3>HealthSpanIQ</h3>
+                <span class="employer-place">San Diego, CA</span>
+              </div>
+              <p class="employer-about">Health-tech startup using multi-dimensional data to deliver personalized insights for longevity and well-being.</p>
+              <ol class="roles">
+                <li class="role">
+                  <div class="role-head">
+                    <h4>Junior Data Scientist</h4>
+                    <span class="role-dates">May 2026 – Present</span>
+                  </div>
+                  <ul class="role-points">
+                    <li>Built an automated feature selection pipeline (RFECV, LightGBM, SHAP) that cut the feature space by <strong>over 95%</strong>, from <strong>20,000+ variables</strong> to key predictors, across <strong>500,000+ clinical records</strong>.</li>
+                    <li>Engineered a modular ETL pipeline in Python that cut dataset integration time from <strong>2 weeks to minutes</strong>, with schema normalization, provenance tracking and feature ablation testing.</li>
+                  </ul>
+                  <details class="more">
+                    <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+                    <ul class="role-points">
+                      <li>Earned an executive commendation for onboarding cross-functional talent and clinical experts, establishing HIPAA and NIH data governance standards, and replacing threshold cutoffs with continuous actuarial hazard models.</li>
+                    </ul>
+                  </details>
+                  <ul class="tags" aria-label="Tools">
+                    <li>RFECV</li><li>LightGBM</li><li>SHAP</li><li>Pandas</li><li>NumPy</li><li>SciPy</li>
+                  </ul>
+                </li>
+                <li class="role">
+                  <div class="role-head">
+                    <h4>Data Scientist Intern</h4>
+                    <span class="role-dates">Dec 2025 – May 2026</span>
+                  </div>
+                  <ul class="role-points">
+                    <li>Built a pathology-agnostic health-scoring engine trained on <strong>200,000+ clinical records</strong> and shipped a full-stack MVP for investor demos in <strong>under 30 days</strong>: a Flask REST API in Docker, CI/CD with GitHub Actions, deployed on Azure and Render.</li>
+                  </ul>
+                  <details class="more">
+                    <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+                    <ul class="role-points">
+                      <li>Wrote Databricks SQL to aggregate clinical data, applied K-Means, PCA and silhouette analysis for patient risk profiling, and used sequence mining to extract drug interactions backed by Ivy League research.</li>
+                    </ul>
+                  </details>
+                  <ul class="tags" aria-label="Tools">
+                    <li>Flask</li><li>Docker</li><li>GitHub Actions</li><li>Azure</li><li>Databricks SQL</li><li>K-Means</li><li>PCA</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
           </li>
-          <li>
-            <article class="project">
-              <header>
-                <h3><a href="https://github.com/bjiby02/ROSS">CaseLight</a></h3>
-                <p class="project-context">Swans Applied AI Hackathon, October 2026</p>
-              </header>
-              <p>Reads a personal-injury case from Clio and turns every note, email and document into a 90-second brief for the attorney, plus a separate view for the providers treating the client.</p>
-              <p class="project-stack">Node.js, Claude API, Docker</p>
-              <p><a href="https://github.com/bjiby02/ROSS">View the code on GitHub</a></p>
-            </article>
+
+          <li class="employer">
+            <!-- Logo: add assets/images/experience/villagecore.svg (or .png) to replace the monogram. -->
+            <div class="logo" style="--logo-bg:#6a4c93" aria-hidden="true">VC<img src="assets/images/experience/villagecore.svg" alt=""></div>
+            <div>
+              <div class="employer-head">
+                <h3>VillageCore</h3>
+                <span class="employer-place">San Diego, CA</span>
+              </div>
+              <p class="employer-about">AgeTech non-profit supporting seniors and their caregivers through digital tools.</p>
+              <ol class="roles">
+                <li class="role">
+                  <div class="role-head">
+                    <h4>Software Developer Intern</h4>
+                    <span class="role-dates">May – Jul 2024</span>
+                  </div>
+                  <ul class="role-points">
+                    <li>Built a multi-source scraping pipeline (BeautifulSoup) across <strong>10+ partner networks</strong> into structured Excel reports, cutting discovery time from <strong>days to minutes</strong>.</li>
+                  </ul>
+                  <details class="more">
+                    <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+                    <ul class="role-points">
+                      <li>Implemented responsive WordPress UI components in HTML, CSS and JavaScript during Agile sprints, improving accessibility and navigation for senior users.</li>
+                    </ul>
+                  </details>
+                  <ul class="tags" aria-label="Tools">
+                    <li>Python</li><li>BeautifulSoup</li><li>Excel</li><li>WordPress</li><li>JavaScript</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
           </li>
-          <li>
-            <article class="project">
-              <header>
-                <h3><a href="https://github.com/MalcolmZyx/YouTube-Tool">YT Analytics Studio</a></h3>
-                <p class="project-context">Personal project</p>
-              </header>
-              <p>Two exploratory Jupyter notebooks rebuilt as a web app for YouTube channel analytics: calendar heatmaps of views, tag scores that compare top and bottom performers, and how video length relates to views.</p>
-              <p class="project-stack">Python, Flask, pandas, React, Recharts</p>
-              <p><a href="https://github.com/MalcolmZyx/YouTube-Tool">View the code on GitHub</a></p>
-            </article>
+        </ul>
+
+        <div class="credentials">
+          <div class="credential">
+            <!-- Logo: assets/images/experience/csusm.svg (or .png) -->
+            <div class="logo" style="--logo-bg:#1b3b6f" aria-hidden="true">CSU<img src="assets/images/experience/csusm.svg" alt=""></div>
+            <div>
+              <h3>B.S. Computer Science</h3>
+              <p class="strong">California State University San Marcos, May 2026</p>
+              <p>Summa Cum Laude, 3.95 GPA. Dean's List 2022–2026. ICPC training team.</p>
+              <p>Coursework: Deep Learning, Data Mining, Cloud Computing</p>
+            </div>
+          </div>
+          <div class="credential">
+            <!-- Logo: assets/images/experience/aws.svg (or .png) -->
+            <div class="logo" style="--logo-bg:#232f3e" aria-hidden="true">AWS<img src="assets/images/experience/aws.svg" alt=""></div>
+            <div>
+              <h3>AWS Certified Machine Learning Engineer – Associate</h3>
+              <p class="strong">Amazon Web Services, August 2026</p>
+              <p>Building, deploying and operating ML workloads on AWS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title" id="skills-title">Skills</h2>
+        </div>
+        <ul class="skill-groups">
+          <li class="skill-group">
+            <h3>Machine learning</h3>
+            <ul class="skill-list">
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/pytorch.svg);mask-image:url(assets/icons/tech/pytorch.svg)"></span>PyTorch</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/tensorflow.svg);mask-image:url(assets/icons/tech/tensorflow.svg)"></span>TensorFlow</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/keras.svg);mask-image:url(assets/icons/tech/keras.svg)"></span>Keras</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/scikitlearn.svg);mask-image:url(assets/icons/tech/scikitlearn.svg)"></span>scikit-learn</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/huggingface.svg);mask-image:url(assets/icons/tech/huggingface.svg)"></span>Hugging Face</li>
+              <li class="skill">LightGBM</li>
+              <li class="skill">XGBoost</li>
+              <li class="skill">SHAP</li>
+              <li class="skill">Transformers</li>
+            </ul>
+          </li>
+          <li class="skill-group">
+            <h3>Data engineering</h3>
+            <ul class="skill-list">
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/databricks.svg);mask-image:url(assets/icons/tech/databricks.svg)"></span>Databricks</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/docker.svg);mask-image:url(assets/icons/tech/docker.svg)"></span>Docker</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/flask.svg);mask-image:url(assets/icons/tech/flask.svg)"></span>Flask</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/githubactions.svg);mask-image:url(assets/icons/tech/githubactions.svg)"></span>GitHub Actions</li>
+              <li class="skill">SQL</li>
+              <li class="skill">ETL pipelines</li>
+              <li class="skill">REST APIs</li>
+              <li class="skill">Slurm</li>
+              <li class="skill">PyTorch DDP</li>
+            </ul>
+          </li>
+          <li class="skill-group">
+            <h3>Analysis and visualization</h3>
+            <ul class="skill-list">
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/pandas.svg);mask-image:url(assets/icons/tech/pandas.svg)"></span>Pandas</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/numpy.svg);mask-image:url(assets/icons/tech/numpy.svg)"></span>NumPy</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/scipy.svg);mask-image:url(assets/icons/tech/scipy.svg)"></span>SciPy</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/plotly.svg);mask-image:url(assets/icons/tech/plotly.svg)"></span>Plotly</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/jupyter.svg);mask-image:url(assets/icons/tech/jupyter.svg)"></span>Jupyter</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/powerbi.svg);mask-image:url(assets/icons/tech/powerbi.svg)"></span>Power BI</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/tableau.svg);mask-image:url(assets/icons/tech/tableau.svg)"></span>Tableau</li>
+              <li class="skill">Matplotlib</li>
+              <li class="skill">Seaborn</li>
+            </ul>
+          </li>
+          <li class="skill-group">
+            <h3>Languages</h3>
+            <ul class="skill-list">
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/python.svg);mask-image:url(assets/icons/tech/python.svg)"></span>Python</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/cplusplus.svg);mask-image:url(assets/icons/tech/cplusplus.svg)"></span>C++</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/openjdk.svg);mask-image:url(assets/icons/tech/openjdk.svg)"></span>Java</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/javascript.svg);mask-image:url(assets/icons/tech/javascript.svg)"></span>JavaScript</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/html5.svg);mask-image:url(assets/icons/tech/html5.svg)"></span>HTML and CSS</li>
+              <li class="skill">SQL</li>
+              <li class="skill">C#</li>
+            </ul>
+          </li>
+          <li class="skill-group">
+            <h3>Cloud and tools</h3>
+            <ul class="skill-list">
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/amazonwebservices.svg);mask-image:url(assets/icons/tech/amazonwebservices.svg)"></span>AWS</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/microsoftazure.svg);mask-image:url(assets/icons/tech/microsoftazure.svg)"></span>Azure</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/googlecloud.svg);mask-image:url(assets/icons/tech/googlecloud.svg)"></span>Google Cloud</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/linux.svg);mask-image:url(assets/icons/tech/linux.svg)"></span>Linux</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/git.svg);mask-image:url(assets/icons/tech/git.svg)"></span>Git</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/github.svg);mask-image:url(assets/icons/tech/github.svg)"></span>GitHub</li>
+              <li class="skill"><span class="skill-icon" style="-webkit-mask-image:url(assets/icons/tech/unity.svg);mask-image:url(assets/icons/tech/unity.svg)"></span>Unity</li>
+            </ul>
+          </li>
+          <li class="skill-group">
+            <h3>Specialties</h3>
+            <ul class="skill-list">
+              <li class="skill">Feature selection</li>
+              <li class="skill">Computer vision</li>
+              <li class="skill">Natural language processing</li>
+              <li class="skill">Geospatial ML</li>
+              <li class="skill">Unsupervised learning</li>
+              <li class="skill">Distributed training on HPC</li>
+              <li class="skill">RAG and LLM integration</li>
+            </ul>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="stack-title">
+    <!-- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="wrap">
-        <h2 id="stack-title">Skills and tools</h2>
-        <dl class="stack">
+        <div class="section-head">
           <div>
-            <dt>Machine learning</dt>
-            <dd>PyTorch, TensorFlow, Keras, scikit-learn, XGBoost, LightGBM; feature selection (RFECV) and SHAP; NLP with Transformers; computer vision</dd>
+            <h2 class="section-title" id="projects-title">Projects</h2>
+            <p class="section-sub">Select a project for details, photos and demos.</p>
           </div>
-          <div>
-            <dt>Data engineering</dt>
-            <dd>ETL pipelines, SQL, Databricks, Docker, REST APIs with Flask, distributed training (DDP, Slurm)</dd>
-          </div>
-          <div>
-            <dt>Analysis and visualization</dt>
-            <dd>pandas, NumPy, SciPy, Matplotlib, Seaborn, Plotly, Power BI, Tableau</dd>
-          </div>
-          <div>
-            <dt>Languages</dt>
-            <dd>Python, SQL, C++, Java, C#, HTML, CSS, JavaScript</dd>
-          </div>
-          <div>
-            <dt>Cloud and tooling</dt>
-            <dd>AWS, Azure, GCP, Git, GitHub Actions, Linux, MLflow, Weights &amp; Biases</dd>
-          </div>
-          <div>
-            <dt>Certification</dt>
-            <dd>AWS Certified Machine Learning Engineer – Associate (August 2026)</dd>
-          </div>
-        </dl>
+          <ul class="chips" id="project-filters" aria-label="Filter projects"></ul>
+        </div>
+        <ul class="grid" id="project-grid"></ul>
+        <noscript><p class="section-sub">The project gallery needs JavaScript. My <a href="assets/malcolm-zartman-resume.pdf">resume</a> summarizes the main projects.</p></noscript>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="links-title">
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap">
-        <h2 id="links-title">Find me online</h2>
-        <ul class="link-list">
-          <li><a href="mailto:mjzartman@gmail.com">mjzartman@gmail.com</a></li>
-          <li><a href="https://www.linkedin.com/in/malcolm-zartman">LinkedIn</a></li>
-          <li><a href="https://github.com/MalcolmZyx">GitHub</a></li>
-          <li><a href="https://malcolmz.itch.io/">itch.io</a></li>
-        </ul>
+        <div class="section-head">
+          <h2 class="section-title" id="about-title">About</h2>
+        </div>
+        <div class="about-layout">
+          <div class="about-text">
+            <p>I'm a data scientist who likes taking messy, real-world data all the way to something people can use: a pipeline, a model, an API or a dashboard. I graduated <strong>summa cum laude in Computer Science from Cal State San Marcos</strong> in May 2026 and now work at <strong>HealthSpanIQ</strong>, where I started as an intern.</p>
+            <p>Teaching is a big part of how I learn. I've been an instructional assistant for computer science courses at CSUSM and taught Python and Scratch to young coders at theCoderSchool.</p>
+            <p>I'm looking for full-time roles in data science, data engineering and software engineering. If you're working on something interesting or need a hackathon teammate, <a href="#contact">get in touch</a>.</p>
+          </div>
+          <div>
+            <!-- Optional photos: assets/images/about/<name>.jpg (4:3). Each appears automatically once the file exists. -->
+            <ul class="beyond" aria-label="Beyond the code">
+              <li class="beyond-item">
+                <img class="beyond-photo" src="assets/images/about/athlete.jpg" alt="Malcolm competing in track" loading="lazy" data-optional>
+                <div class="beyond-text"><h3>Athlete</h3><p>Played soccer and ran track for years, and still an active gym-goer.</p></div>
+              </li>
+              <li class="beyond-item">
+                <img class="beyond-photo" src="assets/images/about/trumpet.jpg" alt="Malcolm playing the trumpet" loading="lazy" data-optional>
+                <div class="beyond-text"><h3>Musician</h3><p>Long-time trumpet player.</p></div>
+              </li>
+              <li class="beyond-item">
+                <img class="beyond-photo" src="assets/images/about/creator.jpg" alt="Malcolm filming content" loading="lazy" data-optional>
+                <div class="beyond-text"><h3>Content creator</h3><p>Grew a personal brand on TikTok and YouTube to 15,000+ followers and millions of views.</p></div>
+              </li>
+              <li class="beyond-item">
+                <img class="beyond-photo" src="assets/images/about/reading.jpg" alt="A stack of books" loading="lazy" data-optional>
+                <div class="beyond-text"><h3>Reader</h3><p>Dystopian and post-apocalyptic books. Recommendations welcome.</p></div>
+              </li>
+              <li class="beyond-item">
+                <img class="beyond-photo" src="assets/images/about/also.jpg" alt="" loading="lazy" data-optional>
+                <div class="beyond-text"><h3>Also</h3><p>Learning ASL, building games with local LLMs, and a Star Wars fan.</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Contact -->
+  <footer class="contact" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
-      <p>© 2026 Malcolm Zartman</p>
-      <ul>
-        <li><a href="mailto:mjzartman@gmail.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/malcolm-zartman">LinkedIn</a></li>
-        <li><a href="https://github.com/MalcolmZyx">GitHub</a></li>
-        <li><a href="https://github.com/MalcolmZyx/MalcolmZyx.github.io">Site source</a></li>
+      <h2 id="contact-title">Let's talk</h2>
+      <p class="lede">I'm open to full-time roles in data science, data engineering and software engineering. Email is the fastest way to reach me.</p>
+      <a class="contact-email" href="mailto:mjzartman@gmail.com">mjzartman@gmail.com</a>
+      <ul class="pills">
+        <li><a class="pill" href="https://www.linkedin.com/in/malcolm-zartman">LinkedIn</a></li>
+        <li><a class="pill" href="https://github.com/MalcolmZyx">GitHub</a></li>
+        <li><a class="pill" href="https://malcolmz.itch.io/">itch.io</a></li>
+        <li><a class="pill" href="assets/malcolm-zartman-resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
       </ul>
+      <div class="footer-bottom">
+        <p>© 2026 Malcolm Zartman</p>
+        <p><a href="https://github.com/MalcolmZyx/MalcolmZyx.github.io">Site source on GitHub</a></p>
+      </div>
     </div>
   </footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="dialog-scroll">
+      <button class="dialog-close" type="button" aria-label="Close project">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg>
+      </button>
+      <div id="project-dialog-body"></div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
