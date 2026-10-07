@@ -1,5 +1,6 @@
 /*
   Project data: one entry per project, in display order.
+  Keep it newest first, by when the project ended (most recent month at the top).
 
   Images (no code changes needed beyond this file):
     Cover / grid thumbnail   assets/images/projects/<slug>.jpg        16:9, at least 1280x720
@@ -41,45 +42,6 @@ window.PROJECTS = [
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/ROSS" }]
   },
   {
-    slug: "ai-engineering-challenge",
-    title: "AI Engineering Challenge",
-    cat: "software",
-    kind: "Voice AI",
-    dates: "Jul 2026",
-    summary: "A voice-agent QA harness that calls conversational AI agents with scripted patient scenarios and flags transcripts for review.",
-    description: "Built for an AI engineering challenge: a scenario-driven voice caller that exercises conversational AI agents, plus a transcript QA tool that tracks what happened in each test run.",
-    highlights: [
-      "Built a real-time voice pipeline with Pipecat, Groq speech recognition and LLM responses, and local Kokoro speech synthesis.",
-      "Defined multi-step patient scenarios in JSON, with follow-up states that advance when the caller says a trigger phrase.",
-      "Wrote a transcript analyzer that builds a human-review queue, flagging empty or one-sided conversations and runs outside the 1–3 minute target."
-    ],
-    impact: [],
-    stack: ["Python", "Pipecat", "Groq", "Kokoro TTS", "JSON"],
-    videos: [],
-    images: [],
-    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/AI-Voice-Bot-Engineering-Challenge" }]
-  },
-  {
-    slug: "zombie-trail",
-    title: "Zombie Trail",
-    cat: "games",
-    kind: "Game jam",
-    dates: "Winter 2024",
-    team: "2024 Winter Game Jam",
-    summary: "Unity game jam entry that alternates night-time wave defense with daytime resource management across a map of the US.",
-    description: "A zombie-apocalypse game built in Unity for the 2024 Winter Game Jam, alternating between a night stage and a day stage.",
-    highlights: [
-      "Night: a bullet-hell wave defense where you keep your party and bus alive against six zombie types, from walkers to tanks.",
-      "Day: choose a destination on a map of the United States, where each location favors different resources such as food, weapons, ammo and gas.",
-      "Surviving a night earns currency and a choice of loot to spend during the next day."
-    ],
-    impact: [],
-    stack: ["Unity", "C#"],
-    videos: [],
-    images: [],
-    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Zombie-Trail" }]
-  },
-  {
     slug: "synthetic-data-research",
     title: "Synthetic Data in AV Research",
     cat: "ml",
@@ -105,6 +67,25 @@ window.PROJECTS = [
     links: []
   },
   {
+    slug: "ai-engineering-challenge",
+    title: "AI Engineering Challenge",
+    cat: "software",
+    kind: "Voice AI",
+    dates: "Jul 2026",
+    summary: "A voice-agent QA harness that calls conversational AI agents with scripted patient scenarios and flags transcripts for review.",
+    description: "Built for an AI engineering challenge: a scenario-driven voice caller that exercises conversational AI agents, plus a transcript QA tool that tracks what happened in each test run.",
+    highlights: [
+      "Built a real-time voice pipeline with Pipecat, Groq speech recognition and LLM responses, and local Kokoro speech synthesis.",
+      "Defined multi-step patient scenarios in JSON, with follow-up states that advance when the caller says a trigger phrase.",
+      "Wrote a transcript analyzer that builds a human-review queue, flagging empty or one-sided conversations and runs outside the 1–3 minute target."
+    ],
+    impact: [],
+    stack: ["Python", "Pipecat", "Groq", "Kokoro TTS", "JSON"],
+    videos: [],
+    images: [],
+    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/AI-Voice-Bot-Engineering-Challenge" }]
+  },
+  {
     slug: "project-souls",
     title: "Project Souls",
     cat: "games",
@@ -126,29 +107,6 @@ window.PROJECTS = [
     videos: [],
     images: [],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Souls-Game" }]
-  },
-  {
-    slug: "wildfire-predictor",
-    title: "Wildfire Predictor",
-    cat: "ml",
-    kind: "Geospatial machine learning",
-    dates: "Aug – Dec 2025",
-    team: "Industry-sponsored senior design project, team of 4",
-    badge: "80% recall",
-    summary: "Geospatial ML sub-model for early wildfire warnings, fed by a pipeline over 160K+ spatial and time-series records.",
-    description: "An industry-sponsored proof of concept for predicting wildfire risk, built as part of a larger AI fusion architecture to help emergency responders allocate resources.",
-    highlights: [
-      "Designed a geospatial ingestion pipeline that automates preprocessing for 160,000+ spatial and time-series records (HDF, GeoTIFF) with CRS alignment.",
-      "Fed an interactive UI used to validate model outputs as a corporate platform proof of concept.",
-      "Engineered a specialized sub-model within the predictive fusion architecture."
-    ],
-    impact: [
-      "Reached 80% recall on early-warning risk classifications."
-    ],
-    stack: ["Python", "Geospatial ML", "HDF", "GeoTIFF", "Time series"],
-    videos: [],
-    images: [],
-    links: []
   },
   {
     slug: "constructive-criticism-classifier",
@@ -173,6 +131,29 @@ window.PROJECTS = [
     videos: [],
     images: [],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Constructive-Criticism-Classifier" }]
+  },
+  {
+    slug: "wildfire-predictor",
+    title: "Wildfire Predictor",
+    cat: "ml",
+    kind: "Geospatial machine learning",
+    dates: "Aug – Dec 2025",
+    team: "Industry-sponsored senior design project, team of 4",
+    badge: "80% recall",
+    summary: "Geospatial ML sub-model for early wildfire warnings, fed by a pipeline over 160K+ spatial and time-series records.",
+    description: "An industry-sponsored proof of concept for predicting wildfire risk, built as part of a larger AI fusion architecture to help emergency responders allocate resources.",
+    highlights: [
+      "Designed a geospatial ingestion pipeline that automates preprocessing for 160,000+ spatial and time-series records (HDF, GeoTIFF) with CRS alignment.",
+      "Fed an interactive UI used to validate model outputs as a corporate platform proof of concept.",
+      "Engineered a specialized sub-model within the predictive fusion architecture."
+    ],
+    impact: [
+      "Reached 80% recall on early-warning risk classifications."
+    ],
+    stack: ["Python", "Geospatial ML", "HDF", "GeoTIFF", "Time series"],
+    videos: [],
+    images: [],
+    links: []
   },
   {
     slug: "youtube-performance-analyzer",
@@ -200,6 +181,28 @@ window.PROJECTS = [
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/YouTube-Tool" }]
   },
   {
+    slug: "financial-data-automation",
+    title: "Financial Data Automation Tool",
+    cat: "data",
+    kind: "Data engineering",
+    dates: "Jun – Jul 2025",
+    badge: "1 hr → 10 s",
+    summary: "Fills DCF and dividend valuation models in Google Sheets straight from yfinance.",
+    description: "A Python ETL pipeline that pulls public financial data into personal valuation models, so a non-technical investor can run institutional-style analysis.",
+    highlights: [
+      "Extracted balance sheet, cash flow and dividend history indicators automatically with yfinance.",
+      "Populated custom dividend discount and discounted cash flow models through the Google Sheets API (gspread).",
+      "Connected securely with OAuth 2.0 service accounts and handled API rate limits and dropped connections."
+    ],
+    impact: [
+      "Turned a one-hour manual process into a 10-second automated run, with no manual data entry errors."
+    ],
+    stack: ["Python", "yfinance", "Google Sheets API", "gspread", "Pandas", "OAuth 2.0"],
+    videos: [],
+    images: [],
+    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/stocks-util-project" }]
+  },
+  {
     slug: "codez-ide",
     title: "CodEZ IDE",
     cat: "software",
@@ -225,28 +228,6 @@ window.PROJECTS = [
       { label: "Code on GitHub", href: "https://github.com/MalcolmZyx/CodEZIDE" },
       { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=kgtj6e4F5oo" }
     ]
-  },
-  {
-    slug: "financial-data-automation",
-    title: "Financial Data Automation Tool",
-    cat: "data",
-    kind: "Data engineering",
-    dates: "Jun – Jul 2025",
-    badge: "1 hr → 10 s",
-    summary: "Fills DCF and dividend valuation models in Google Sheets straight from yfinance.",
-    description: "A Python ETL pipeline that pulls public financial data into personal valuation models, so a non-technical investor can run institutional-style analysis.",
-    highlights: [
-      "Extracted balance sheet, cash flow and dividend history indicators automatically with yfinance.",
-      "Populated custom dividend discount and discounted cash flow models through the Google Sheets API (gspread).",
-      "Connected securely with OAuth 2.0 service accounts and handled API rate limits and dropped connections."
-    ],
-    impact: [
-      "Turned a one-hour manual process into a 10-second automated run, with no manual data entry errors."
-    ],
-    stack: ["Python", "yfinance", "Google Sheets API", "gspread", "Pandas", "OAuth 2.0"],
-    videos: [],
-    images: [],
-    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/stocks-util-project" }]
   },
   {
     slug: "google-ads-sales-analysis",
@@ -290,6 +271,26 @@ window.PROJECTS = [
     videos: [],
     images: [],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Network-Programming" }]
+  },
+  {
+    slug: "zombie-trail",
+    title: "Zombie Trail",
+    cat: "games",
+    kind: "Game jam",
+    dates: "Winter 2024",
+    team: "2024 Winter Game Jam",
+    summary: "Unity game jam entry that alternates night-time wave defense with daytime resource management across a map of the US.",
+    description: "A zombie-apocalypse game built in Unity for the 2024 Winter Game Jam, alternating between a night stage and a day stage.",
+    highlights: [
+      "Night: a bullet-hell wave defense where you keep your party and bus alive against six zombie types, from walkers to tanks.",
+      "Day: choose a destination on a map of the United States, where each location favors different resources such as food, weapons, ammo and gas.",
+      "Surviving a night earns currency and a choice of loot to spend during the next day."
+    ],
+    impact: [],
+    stack: ["Unity", "C#"],
+    videos: [],
+    images: [],
+    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Zombie-Trail" }]
   },
   {
     slug: "trench-runner",

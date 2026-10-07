@@ -2,7 +2,17 @@
 
 Personal portfolio of Malcolm Zartman, live at **https://malcolmzyx.github.io**.
 
-A single scrolling page (Hero, Experience, Skills, Projects, About, Contact) built with plain HTML, CSS and a little JavaScript. No build step: edit a file, commit, and GitHub Pages serves it.
+I'm a data scientist working on machine learning, data pipelines and the occasional game. This repo is the source for my portfolio: work experience, skills, and a project gallery where each project opens in a panel with photos, demo videos, results and code links.
+
+## About this site
+
+- **One scrolling page:** Hero, Experience, Skills, Projects, About, Contact.
+- **Project panels:** selecting a project opens it over the page with a carousel of images and YouTube demos. The browser Back button closes it, and each project has its own link (`/#ross`, `/#project-souls`, ...).
+- **Built with** plain HTML, CSS and a little JavaScript. No framework, no build step, hosted on GitHub Pages.
+- **Light and dark mode** follow your system setting. Keyboard and screen-reader friendly, and respects reduced-motion settings.
+- **Tool icons** from [Simple Icons](https://simpleicons.org).
+
+Built together with Claude Code. Everything below is a guide for editing the site.
 
 ## Folder structure
 
@@ -31,18 +41,25 @@ MalcolmZyx.github.io/
 
 ## Updating text
 
+Everything below is a plain text edit. No build step: save the file, commit, and GitHub Pages serves it.
+
+
 | To change | Edit | Where |
 |---|---|---|
 | Name, one-line summary, quick facts, buttons | `index.html` | `<!-- Hero -->` section |
 | Jobs, bullets, tools under each role | `index.html` | `<!-- Experience -->`, one `<li class="employer">` per company and one `<li class="role">` per role |
 | Degree and certification | `index.html` | `<div class="credentials">` |
 | Additional Experience (teaching, coaching, content, awards) | `index.html` | `<details class="additional">`, one `<li class="extra">` per entry. Dates go in the empty `<span class="role-dates"></span>` |
-| Skills | `index.html` | `<!-- Skills -->`, one `<li class="skill">` per skill |
+| Skills | `index.html` | `<!-- Skills -->`, one `<li class="skill">` per skill. To give a skill an icon, see below |
 | About text and "Beyond the code" tiles | `index.html` | `<!-- About -->` |
 | Email, social links | `index.html` | `<!-- Contact -->` (also in the Hero) |
 | Anything about a project | `assets/data/projects.js` | The project's `{ ... }` entry. Order in the file = order on the page |
 
 To add a project, copy an existing entry in `assets/data/projects.js`, give it a new `slug` (lowercase, hyphens), and fill in the fields. The comment at the top of that file explains each field.
+
+**Project order:** newest first, by when the project ended. Put a new project in the right place in the file; the page shows them in the same order.
+
+**Skill icons:** icons are drawn inline so they work everywhere, including when `index.html` is opened straight from disk. To add one, find the tool on [simpleicons.org](https://simpleicons.org), save its SVG to `assets/icons/tech/<name>.svg` for reference, then copy an existing `<li class="skill">` and replace the `d="..."` value of its `<path>` with the one from the new SVG.
 
 ## Updating images, videos and files
 
@@ -69,7 +86,7 @@ Before uploading photos, remove location data and keep personal details (phone n
 python -m http.server 8000
 ```
 
-Then open http://localhost:8000. Opening `index.html` directly from the file system also works, except the tool icons in Skills.
+Then open http://localhost:8000. Opening `index.html` directly also works.
 
 ## Publishing
 
