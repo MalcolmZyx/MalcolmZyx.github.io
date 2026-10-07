@@ -113,11 +113,14 @@ window.PROJECTS = [
       "Won 3 of 4 course awards at demo day: technical excellence, best art and best overall game."
     ],
     stack: ["Unity", "C#", "Llama 3.1", "RAG", "Groq API", "Finite state machines"],
-    videos: [],
+    videos: ["PkfQ0bkucdI"],
     images: [
       { src: "project-souls-2.jpg", alt: "The den of the final Boss in Project Souls" }
     ],
-    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Souls-Game" }]
+    links: [
+      { label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Souls-Game" },
+      { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=PkfQ0bkucdI"}
+    ]
   },
   {
     slug: "constructive-criticism-classifier",
@@ -220,7 +223,7 @@ window.PROJECTS = [
     kind: "Software engineering",
     dates: "Feb – May 2025",
     team: "Team of 4, CS 370, CSUSM. Demo narrated by a teammate.",
-    badge: "Demo",
+    badge: "Easy & Secure IDE",
     summary: "A one-click desktop IDE for intro CS students that compiles C++ and Java locally.",
     description: "A lightweight, privacy-first IDE for novice programmers that replaces crash-prone remote UNIX environments with a one-click desktop app.",
     highlights: [
