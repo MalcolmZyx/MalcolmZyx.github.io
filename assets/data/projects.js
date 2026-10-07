@@ -24,20 +24,20 @@ window.PROJECTS = [
     cat: "software",
     kind: "AI hackathon",
     dates: "Oct 2026",
-    team: "Team of 2, Swans Applied AI Hackathon, San Diego",
+    team: "Team of 3, Swans Applied AI Hackathon, San Diego. Competed against 80+ other builders.",
     badge: "1st place",
-    summary: "First-place hackathon app that turns a personal-injury case file into a cited, 90-second brief for the attorney.",
-    description: "Won first place at the Swans Applied AI Hackathon. ROSS (demoed as CaseLight) reads a law firm's case from Clio Manage without ever writing to it, digests every note, email, call, task and document, and produces two views: a 90-second brief for the attorney and a curated, view-tracked portal for the medical providers treating the client.",
+    summary: "First-place hackathon app that turns a personal-injury case file into a cited, timeline-driven brief for attorneys and a curated view for medical providers.",
+    description: "Won first place at the Swans Applied AI Hackathon in a team of 3. ROSS gives attorneys and medical providers a simple, unified view of a case: a timeline summary of what happened and when, an AI chat grounded in the entire case file, citations on everything with the exact source highlighted in the original PDF, and a summary of everything the attorney missed since they last logged in. What set it apart was simplicity: the right information, in the right place, at the right time, so attorneys and providers could pick up a case and understand it immediately.",
     highlights: [
-      "Read Clio Manage through a client that can only send GET requests, so the app can never change a firm's data.",
-      "OCR'd 522 scanned pages once and linked every injury, number and date back to the exact note, email or page it came from.",
-      "Used Claude Haiku 4.5 to triage entries and Claude Opus 5.5 to write the cited brief, caching every call so a case is never processed twice (about $0.40 for a first full digest).",
-      "Built the provider portal server-side from an allow-list, so case value and strategy notes never reach providers, and logged every time a share link is opened."
+      "Collaborated with a team of 3 on design iteration and feature ideation: we explored multiple approaches to case digestion and settled on a simplified, timeline-first design that actually works.",
+      "Built an AI chat that answers questions grounded in the entire case file and all documents, powered by BM25 retrieval and Claude Haiku 4.5 (fallback to OpenAI when needed).",
+      "Linked every fact back to its source in the original case documents with citation highlights, so professionals can verify the brief against the source material.",
+      "Let attorneys choose per provider what information to share (case status, treatment records, insurance limits) before sending, with a summary of new items added since the provider last opened the case. All controls are enforced server-side so case strategy and settlement notes never reach providers."
     ],
     impact: [
-      "1st place at the Swans Applied AI Hackathon 2026."
+      "1st place at the Swans Applied AI Hackathon 2026, beating 80+ competing teams."
     ],
-    stack: ["Node.js", "Claude API", "SQLite", "Tesseract OCR", "Clio API", "Docker"],
+    stack: ["Node.js", "Claude API", "OpenAI API", "SQLite", "Clio API", "Docker"],
     videos: ["xFNbC3isjr4"],
     images: [
       { src: "ross-2.jpg", alt: "The ROSS team in front of the Law-Di-Gras backdrop" },
@@ -106,8 +106,9 @@ window.PROJECTS = [
     team: "Team of 6, CS 485, CSUSM",
     badge: "3 of 4 awards",
     summary: "Souls-style RPG with NPCs you can actually talk to: a RAG pipeline in Unity with a Groq Llama 3.1 fallback.",
-    description: "A Souls-inspired RPG where I led the AI and security architecture: a state-driven combat loop paired with NPCs that hold real, in-character conversations.",
+    description: "A Souls-inspired RPG where I led the AI, security architecture, and boss fight design: a state-driven combat loop with boss animations and attacks, paired with NPCs that hold real, in-character conversations.",
     highlights: [
+      "Designed and implemented the boss fight functionality with animation chains and attack patterns, creating an engaging final encounter.",
       "Designed a hybrid retrieval-augmented generation pipeline inside Unity: low-latency local JSON keyword search with an asynchronous fallback to the Groq API (llama-3.1-8b-instant).",
       "Built system prompts at runtime from live game state, character personality profiles and persistent player stats.",
       "Added a bring-your-own-key system that obfuscates and validates user-provided API keys in persistent storage."
@@ -155,7 +156,7 @@ window.PROJECTS = [
     cat: "ml",
     kind: "Geospatial machine learning",
     dates: "Aug – Dec 2025",
-    team: "Industry-sponsored senior design project, team of 4",
+    team: "Industry-sponsored senior design project, team of 5",
     badge: "80% recall",
     summary: "Geospatial ML sub-model for early wildfire warnings, fed by a pipeline over 160K+ spatial and time-series records.",
     description: "An industry-sponsored proof of concept for predicting wildfire risk, built as part of a larger AI fusion architecture to help emergency responders allocate resources.",
@@ -167,7 +168,7 @@ window.PROJECTS = [
     impact: [
       "Reached 80% recall on early-warning risk classifications."
     ],
-    stack: ["Python", "Geospatial ML", "HDF", "GeoTIFF", "Time series"],
+    stack: ["Python", "Geospatial ML", "HDF", "GeoTIFF", "Time series", "*Other geospatial tools and frameworks"],
     videos: [],
     images: [],
     links: []
@@ -299,7 +300,7 @@ window.PROJECTS = [
     summary: "Unity game jam entry that alternates night-time wave defense with daytime resource management across a map of the US.",
     description: "A zombie-apocalypse game built in Unity for the 2024 Winter Game Jam, alternating between a night stage and a day stage.",
     highlights: [
-      "Night: a bullet-hell wave defense where you keep your party and bus alive against six zombie types, from walkers to tanks.",
+      "Night: an intense wave defense where you keep your party and bus alive against six zombie types, from walkers to tanks.",
       "Day: choose a destination on a map of the United States, where each location favors different resources such as food, weapons, ammo and gas.",
       "Surviving a night earns currency and a choice of loot to spend during the next day."
     ],
