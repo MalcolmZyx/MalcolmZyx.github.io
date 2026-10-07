@@ -13,26 +13,20 @@ A one-page static portfolio hosted on GitHub Pages, built through feature branch
 
 ```
 MalcolmZyx.github.io/
-├── index.html                 The whole site
-├── about.html, contact.html,  Redirects to the matching home-page sections
-│   projects.html
+├── index.html          The whole site
+├── 404.html            Not-found page; redirects old /about.html, /contact.html, /projects.html
 ├── assets/
-│   ├── css/style.css
-│   ├── js/projects.js         Project data (edit this to add or change projects)
-│   ├── js/main.js             Grid, filters, project panel, carousel
-│   ├── icons/                 favicon.svg, tech/ (Simple Icons for the Skills section)
-│   ├── images/
-│   │   ├── headshot*.{jpg,webp}
-│   │   ├── projects/<slug>.jpg           Cover thumbnails (16:9)
-│   │   ├── projects/<slug>-preview.mp4   Optional hover preview
-│   │   ├── experience/<name>.svg|png     Optional company logos (else monogram)
-│   │   └── about/<name>.jpg              Optional "Beyond the code" photos (4:3)
-│   └── malcolm-zartman-resume.pdf
-├── .nojekyll
+│   ├── css/            style.css
+│   ├── data/           projects.js (project content)
+│   ├── js/             main.js (grid, filters, project panel, carousel)
+│   ├── files/          resume PDF
+│   ├── icons/          favicon.svg, tech/ (Skills icons)
+│   └── images/         profile/, projects/, experience/, about/, originals/
+├── docs/PLAN.md        This file
 ├── CLAUDE.md
-├── PLAN.md
-└── README.md
+└── README.md           How to update text and assets
 ```
+
 
 ## Workflow for every phase
 
@@ -98,16 +92,24 @@ Branch: `feature/redesign`
 - [x] Project panel (`<dialog>`): media carousel (videos and images), details, previous/next, "More projects", shareable `#slug` links, Back button closes it
 - [x] About: short bio plus "Beyond the code" tiles with optional photos
 - [x] Contact footer
-- [x] Old pages redirect to their new sections
+- [x] Old pages redirect to their new sections (now handled by `404.html`)
 - [ ] Add project thumbnails, extra carousel images and demo videos as they're ready
 - [ ] Optional: company logos and About photos
 
-## Phase 5: Polish & QA
+## Phase 5: Additions and cleanup
+Branch: `feature/additions-and-cleanup`
+
+- [x] Red ring around the headshot
+- [x] Expandable Additional Experience (teaching, coaching, content creation, awards)
+- [x] Degree extracurriculars: ICPC, Game Development Club, Google Developer Club
+- [x] Projects: ROSS (1st place) first, AI Engineering Challenge, Zombie Trail
+- [x] Repo reorganized into folders; README documents how to update everything
+
+## Phase 6: Polish & QA
 Branch: `feature/polish`
 
 - [ ] Lighthouse audit (Performance, Accessibility, Best Practices, SEO)
 - [ ] Social preview image (1200x630) for link sharing
-- [ ] Update `README.md` with a description and live-site link
 
 ### Definition of done (every phase)
 - Renders correctly at 375px, 768px, 1024px and 1440px widths

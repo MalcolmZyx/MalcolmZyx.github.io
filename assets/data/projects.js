@@ -1,5 +1,6 @@
 /*
   Project data: one entry per project, in display order.
+  Keep it newest first, by when the project ended (most recent month at the top).
 
   Images (no code changes needed beyond this file):
     Cover / grid thumbnail   assets/images/projects/<slug>.jpg        16:9, at least 1280x720
@@ -16,6 +17,30 @@
     links      [{ label, href }]
 */
 window.PROJECTS = [
+  {
+    slug: "ross",
+    title: "ROSS",
+    cat: "software",
+    kind: "AI hackathon",
+    dates: "Oct 2026",
+    team: "Team of 2, Swans Applied AI Hackathon, San Diego",
+    badge: "1st place",
+    summary: "First-place hackathon app that turns a personal-injury case file into a cited, 90-second brief for the attorney.",
+    description: "Won first place at the Swans Applied AI Hackathon. ROSS (demoed as CaseLight) reads a law firm's case from Clio Manage without ever writing to it, digests every note, email, call, task and document, and produces two views: a 90-second brief for the attorney and a curated, view-tracked portal for the medical providers treating the client.",
+    highlights: [
+      "Read Clio Manage through a client that can only send GET requests, so the app can never change a firm's data.",
+      "OCR'd 522 scanned pages once and linked every injury, number and date back to the exact note, email or page it came from.",
+      "Used Claude Haiku 4.5 to triage entries and Claude Opus 5.5 to write the cited brief, caching every call so a case is never processed twice (about $0.40 for a first full digest).",
+      "Built the provider portal server-side from an allow-list, so case value and strategy notes never reach providers, and logged every time a share link is opened."
+    ],
+    impact: [
+      "1st place at the Swans Applied AI Hackathon 2026."
+    ],
+    stack: ["Node.js", "Claude API", "SQLite", "Tesseract OCR", "Clio API", "Docker"],
+    videos: [],
+    images: [],
+    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/ROSS" }]
+  },
   {
     slug: "synthetic-data-research",
     title: "Synthetic Data in AV Research",
@@ -42,12 +67,31 @@ window.PROJECTS = [
     links: []
   },
   {
+    slug: "ai-engineering-challenge",
+    title: "AI Engineering Challenge",
+    cat: "software",
+    kind: "Voice AI",
+    dates: "Jul 2026",
+    summary: "A voice-agent QA harness that calls conversational AI agents with scripted patient scenarios and flags transcripts for review.",
+    description: "Built for an AI engineering challenge: a scenario-driven voice caller that exercises conversational AI agents, plus a transcript QA tool that tracks what happened in each test run.",
+    highlights: [
+      "Built a real-time voice pipeline with Pipecat, Groq speech recognition and LLM responses, and local Kokoro speech synthesis.",
+      "Defined multi-step patient scenarios in JSON, with follow-up states that advance when the caller says a trigger phrase.",
+      "Wrote a transcript analyzer that builds a human-review queue, flagging empty or one-sided conversations and runs outside the 1–3 minute target."
+    ],
+    impact: [],
+    stack: ["Python", "Pipecat", "Groq", "Kokoro TTS", "JSON"],
+    videos: [],
+    images: [],
+    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/AI-Voice-Bot-Engineering-Challenge" }]
+  },
+  {
     slug: "project-souls",
     title: "Project Souls",
     cat: "games",
     kind: "Game AI",
     dates: "Mar – May 2026",
-    team: "Team of 6, CSUSM",
+    team: "Team of 6, CS 485, CSUSM",
     badge: "3 of 4 awards",
     summary: "Souls-style RPG with NPCs you can actually talk to: a RAG pipeline in Unity with a Groq Llama 3.1 fallback.",
     description: "A Souls-inspired RPG where I led the AI and security architecture: a state-driven combat loop paired with NPCs that hold real, in-character conversations.",
@@ -63,6 +107,30 @@ window.PROJECTS = [
     videos: [],
     images: [],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Souls-Game" }]
+  },
+  {
+    slug: "constructive-criticism-classifier",
+    title: "Constructive Criticism Classifier",
+    cat: "ml",
+    kind: "Natural language processing",
+    dates: "Oct – Dec 2025",
+    team: "Team of 3, CS 471, CSUSM",
+    badge: "83% F1",
+    summary: "Finds actionable feedback in game reviews with a DistilBERT model adapted to gamer slang.",
+    description: "An NLP pipeline that pulls actionable criticism out of informal video game reviews, so development teams can prioritize fixes from community feedback instead of reading thousands of emotional reactions.",
+    highlights: [
+      "Fine-tuned DistilBERT to an 83% F1 score, beating CNN, SVM and Naive Bayes baselines.",
+      "Adapted the model to gamer slang with masked language modeling on 50,000 unlabeled reviews.",
+      "Built a hybrid TensorFlow/Keras model that combines text embeddings with VADER sentiment scores to reduce length bias.",
+      "Used stratified k-fold cross-validation and tuned decision thresholds for consistent results across review lengths."
+    ],
+    impact: [
+      "Separates useful developer feedback from purely emotional responses, at the scale of thousands of reviews."
+    ],
+    stack: ["Python", "TensorFlow", "Keras", "Hugging Face", "DistilBERT", "VADER", "Pandas"],
+    videos: [],
+    images: [],
+    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Constructive-Criticism-Classifier" }]
   },
   {
     slug: "wildfire-predictor",
@@ -86,30 +154,6 @@ window.PROJECTS = [
     videos: [],
     images: [],
     links: []
-  },
-  {
-    slug: "constructive-criticism-classifier",
-    title: "Constructive Criticism Classifier",
-    cat: "ml",
-    kind: "Natural language processing",
-    dates: "Oct – Dec 2025",
-    team: "Team of 3, CSUSM",
-    badge: "83% F1",
-    summary: "Finds actionable feedback in game reviews with a DistilBERT model adapted to gamer slang.",
-    description: "An NLP pipeline that pulls actionable criticism out of informal video game reviews, so development teams can prioritize fixes from community feedback instead of reading thousands of emotional reactions.",
-    highlights: [
-      "Fine-tuned DistilBERT to an 83% F1 score, beating CNN, SVM and Naive Bayes baselines.",
-      "Adapted the model to gamer slang with masked language modeling on 50,000 unlabeled reviews.",
-      "Built a hybrid TensorFlow/Keras model that combines text embeddings with VADER sentiment scores to reduce length bias.",
-      "Used stratified k-fold cross-validation and tuned decision thresholds for consistent results across review lengths."
-    ],
-    impact: [
-      "Separates useful developer feedback from purely emotional responses, at the scale of thousands of reviews."
-    ],
-    stack: ["Python", "TensorFlow", "Keras", "Hugging Face", "DistilBERT", "VADER", "Pandas"],
-    videos: [],
-    images: [],
-    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Constructive-Criticism-Classifier" }]
   },
   {
     slug: "youtube-performance-analyzer",
@@ -137,30 +181,6 @@ window.PROJECTS = [
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/YouTube-Tool" }]
   },
   {
-    slug: "codez-ide",
-    title: "CodEZ IDE",
-    cat: "software",
-    kind: "Software engineering",
-    dates: "Feb – May 2025",
-    team: "Team of 4, CSUSM. Demo narrated by a teammate.",
-    badge: "Demo",
-    summary: "A one-click desktop IDE for intro CS students that compiles C++ and Java locally.",
-    description: "A lightweight, privacy-first IDE for novice programmers that replaces crash-prone remote UNIX environments with a one-click desktop app.",
-    highlights: [
-      "Built the compilation engine on Java ProcessBuilder, running g++ and javac natively.",
-      "Streamed live output and errors into the Java Swing interface from background worker threads, so the UI never freezes.",
-      "Used the Facade pattern to keep the execution subsystem separate from the interface.",
-      "Worked across the full development cycle in an Agile team, from UML design to JUnit tests."
-    ],
-    impact: [
-      "Gave intro students a stable local environment, so they could focus on programming instead of setup."
-    ],
-    stack: ["Java", "Java Swing", "C++", "JUnit", "UML"],
-    videos: ["kgtj6e4F5oo"],
-    images: [],
-    links: [{ label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=kgtj6e4F5oo" }]
-  },
-  {
     slug: "financial-data-automation",
     title: "Financial Data Automation Tool",
     cat: "data",
@@ -181,6 +201,33 @@ window.PROJECTS = [
     videos: [],
     images: [],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/stocks-util-project" }]
+  },
+  {
+    slug: "codez-ide",
+    title: "CodEZ IDE",
+    cat: "software",
+    kind: "Software engineering",
+    dates: "Feb – May 2025",
+    team: "Team of 4, CS 370, CSUSM. Demo narrated by a teammate.",
+    badge: "Demo",
+    summary: "A one-click desktop IDE for intro CS students that compiles C++ and Java locally.",
+    description: "A lightweight, privacy-first IDE for novice programmers that replaces crash-prone remote UNIX environments with a one-click desktop app.",
+    highlights: [
+      "Built the compilation engine on Java ProcessBuilder, running g++ and javac natively.",
+      "Streamed live output and errors into the Java Swing interface from background worker threads, so the UI never freezes.",
+      "Used the Facade pattern to keep the execution subsystem separate from the interface.",
+      "Worked across the full development cycle in an Agile team, from UML design to JUnit tests."
+    ],
+    impact: [
+      "Gave intro students a stable local environment, so they could focus on programming instead of setup."
+    ],
+    stack: ["Java", "Java Swing", "C++", "JUnit", "UML"],
+    videos: ["kgtj6e4F5oo"],
+    images: [],
+    links: [
+      { label: "Code on GitHub", href: "https://github.com/MalcolmZyx/CodEZIDE" },
+      { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=kgtj6e4F5oo" }
+    ]
   },
   {
     slug: "google-ads-sales-analysis",
@@ -206,32 +253,12 @@ window.PROJECTS = [
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Google-Ads-Sales-Analysis" }]
   },
   {
-    slug: "caselight",
-    title: "CaseLight",
-    cat: "software",
-    kind: "Hackathon",
-    dates: "Oct 2026",
-    team: "Swans Applied AI Hackathon team",
-    summary: "Turns a personal-injury case file into a 90-second brief for the attorney.",
-    description: "Built at the Swans Applied AI Hackathon. CaseLight reads one matter from Clio Manage (read-only) and digests every note, email, call, task and document into a brief an attorney can absorb in 90 seconds, plus a separate view for the providers treating the client.",
-    highlights: [
-      "Reads a full case from the Clio Manage API without writing anything back.",
-      "Summarizes notes, emails, calls, tasks, calendar entries and documents with the Claude API.",
-      "Shows case value against the coverage actually available and what the client nets after fees and costs."
-    ],
-    impact: [],
-    stack: ["Node.js", "Claude API", "Clio API", "Docker"],
-    videos: [],
-    images: [],
-    links: [{ label: "Code on GitHub", href: "https://github.com/bjiby02/ROSS" }]
-  },
-  {
     slug: "tcp-chat-system",
     title: "Multi-User TCP Chat",
     cat: "software",
     kind: "Networking",
     dates: "Oct – Dec 2024",
-    team: "Course project, CSUSM",
+    team: "Course project, CS 436, CSUSM",
     summary: "Multi-threaded chat server with a custom protocol, history sync and file sharing.",
     description: "A real-time chat server and client over TCP that handles concurrent users, session state and file sharing.",
     highlights: [
@@ -244,6 +271,26 @@ window.PROJECTS = [
     videos: [],
     images: [],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Network-Programming" }]
+  },
+  {
+    slug: "zombie-trail",
+    title: "Zombie Trail",
+    cat: "games",
+    kind: "Game jam",
+    dates: "Winter 2024",
+    team: "2024 Winter Game Jam",
+    summary: "Unity game jam entry that alternates night-time wave defense with daytime resource management across a map of the US.",
+    description: "A zombie-apocalypse game built in Unity for the 2024 Winter Game Jam, alternating between a night stage and a day stage.",
+    highlights: [
+      "Night: a bullet-hell wave defense where you keep your party and bus alive against six zombie types, from walkers to tanks.",
+      "Day: choose a destination on a map of the United States, where each location favors different resources such as food, weapons, ammo and gas.",
+      "Surviving a night earns currency and a choice of loot to spend during the next day."
+    ],
+    impact: [],
+    stack: ["Unity", "C#"],
+    videos: [],
+    images: [],
+    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Zombie-Trail" }]
   },
   {
     slug: "trench-runner",
