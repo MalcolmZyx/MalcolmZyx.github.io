@@ -38,13 +38,16 @@ window.PROJECTS = [
       "1st place at the Swans Applied AI Hackathon 2026."
     ],
     stack: ["Node.js", "Claude API", "SQLite", "Tesseract OCR", "Clio API", "Docker"],
-    videos: [],
+    videos: ["xFNbC3isjr4"],
     images: [
       { src: "ross-2.jpg", alt: "The ROSS team in front of the Law-Di-Gras backdrop" },
       { src: "ross-3.jpg", alt: "The team building ROSS during the hackathon" },
       { src: "ross-4.jpg", alt: "The team receiving the first-place check on stage" }
     ],
-    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/ROSS" }]
+    links: [
+      { label: "Code on GitHub", href: "https://github.com/MalcolmZyx/ROSS" },
+      { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=xFNbC3isjr4" }
+    ]
   },
   {
     slug: "synthetic-data-research",
@@ -119,7 +122,7 @@ window.PROJECTS = [
     ],
     links: [
       { label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Souls-Game" },
-      { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=PkfQ0bkucdI"}
+      { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=PkfQ0bkucdI" }
     ]
   },
   {
