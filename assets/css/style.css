@@ -1344,3 +1344,162 @@ li {
 .more[open] .when-open {
   display: inline;
 }
+
+/* --- Headshot ring ------------------------------------------------------- */
+
+:root {
+  --ring: #ff0033;
+  --ring-glow: rgba(255, 0, 51, 0.35);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ring-glow: rgba(255, 0, 51, 0.22);
+  }
+}
+
+.hero-photo {
+  box-shadow:
+    0 0 0 4px var(--bg),
+    0 0 0 7px var(--ring),
+    0 0 48px 8px var(--ring-glow);
+}
+
+/* --- Additional experience ---------------------------------------------- */
+
+.additional {
+  margin-top: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--bg-raised);
+}
+
+.additional summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem clamp(1.25rem, 3vw, 2rem);
+  border-radius: var(--radius-card);
+  cursor: pointer;
+  list-style: none;
+}
+
+.additional summary::-webkit-details-marker {
+  display: none;
+}
+
+.additional summary:hover {
+  background: var(--surface);
+}
+
+.additional[open] summary {
+  border-bottom: 1px solid var(--line);
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+.additional-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.additional-sub {
+  display: block;
+  color: var(--text-2);
+  font-size: 0.9rem;
+}
+
+.additional-chevron {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  color: var(--text-2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .additional-chevron {
+    transition: transform 0.2s ease;
+  }
+}
+
+.additional[open] .additional-chevron {
+  transform: rotate(180deg);
+}
+
+.additional-body {
+  display: grid;
+  gap: 2rem;
+  padding: 1.5rem clamp(1.25rem, 3vw, 2rem) 2rem;
+}
+
+@media (min-width: 1000px) {
+  .additional-body {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .additional-body .extra-group:first-child {
+    grid-row: span 2;
+  }
+}
+
+.extra-group h3 {
+  margin-bottom: 1rem;
+  color: var(--text-2);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.extra-list {
+  display: grid;
+  gap: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.extra {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.extra-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.1rem 1rem;
+}
+
+.extra-head h4 {
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+.extra-org {
+  color: var(--text-2);
+  font-size: 0.9rem;
+}
+
+.extra p:not(.extra-org) {
+  max-width: 65ch;
+  margin-top: 0.25rem;
+  font-size: 0.925rem;
+}
+
+.logo-sm {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.logo-sm img {
+  padding: 5px;
+}
+
+.logo-award {
+  background: #b8860b;
+  color: #ffffff;
+}
