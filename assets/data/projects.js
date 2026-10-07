@@ -115,7 +115,7 @@ window.PROJECTS = [
     stack: ["Unity", "C#", "Llama 3.1", "RAG", "Groq API", "Finite state machines"],
     videos: [],
     images: [
-      { src: "project-souls-2.jpg", alt: "A ruined stone archway glowing with lava in Project Souls" }
+      { src: "project-souls-2.jpg", alt: "The den of the final Boss in Project Souls" }
     ],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Souls-Game" }]
   },
