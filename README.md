@@ -2,8 +2,6 @@
 
 Personal portfolio of Malcolm Zartman, live at **https://malcolmzyx.github.io**.
 
-I'm a data scientist working on machine learning, data pipelines and the occasional game. This repo is the source for my portfolio: work experience, skills, and a project gallery where each project opens in a panel with photos, demo videos, results and code links.
-
 ## About this site
 
 - **One scrolling page:** Hero, Experience, Skills, Projects, About, Contact.
