@@ -326,5 +326,29 @@ window.PROJECTS = [
     videos: [],
     images: [],
     links: []
+  },
+  {
+    slug: "learning-projects",
+    title: "Learning Projects",
+    cat: "software",
+    kind: "Course and practice labs",
+    dates: "",
+    summary: "A collection of coursework and hands-on labs across data science, machine learning, databases and AI.",
+    description: "A portfolio of learning projects covering core computer science and data science topics: business intelligence dashboards, data mining labs, database design, deep learning implementations, AI introductions, Python fundamentals and SQL practice.",
+    highlights: [
+      "BI-Dashboards: Business intelligence and analytics visualization projects.",
+      "Data-Mining-Labs: Practical implementations of data mining algorithms and techniques.",
+      "Databases-Labs: Database design, normalization and SQL query optimization.",
+      "Deep-Learning-Labs: Neural networks, training loops and computer vision experiments.",
+      "Intro-to-AI-Final: Capstone project applying AI and machine learning techniques.",
+      "Intro-to-AI-labs: Foundational AI algorithms and problem-solving approaches.",
+      "Python-Practice: Python fundamentals, data structures and algorithmic problem-solving.",
+      "SQL-Practice: SQL queries, joins, aggregations and database operations."
+    ],
+    impact: [],
+    stack: ["Python", "SQL", "TensorFlow", "scikit-learn", "Pandas", "Databases"],
+    videos: [],
+    images: [],
+    links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/LearningProjects" }]
   }
 ];
