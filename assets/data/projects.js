@@ -35,7 +35,7 @@ window.PROJECTS = [
       "Let attorneys choose per provider what information to share (case status, treatment records, insurance limits) before sending, with a summary of new items added since the provider last opened the case. All controls are enforced server-side so case strategy and settlement notes never reach providers."
     ],
     impact: [
-      "1st place at the Swans Applied AI Hackathon 2026, beating 80+ competing teams."
+      "1st place at the Swans Applied AI Hackathon 2026, beating 80+ competitors."
     ],
     stack: ["Node.js", "Claude API", "OpenAI API", "SQLite", "Clio API", "Docker"],
     videos: ["xFNbC3isjr4"],
