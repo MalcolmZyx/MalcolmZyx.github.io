@@ -3,9 +3,9 @@
   Keep it newest first, by when the project ended (most recent month at the top).
 
   Images (no code changes needed beyond this file):
-    Cover / grid thumbnail   assets/images/projects/<slug>.jpg        16:9, at least 1280x720
+    Cover / grid thumbnail   assets/images/projects/<slug>.jpg        (or .png / .webp) name must match the slug
     Hover preview (optional) assets/images/projects/<slug>-preview.mp4 silent, under 10 s, under 5 MB
-    Extra carousel images    list them in `images` below, e.g.
+    Extra carousel images    only shown if listed in `images` below, e.g.
                              images: [{ src: "<slug>-2.jpg", alt: "What the image shows" }]
   Videos: add YouTube video IDs to `videos` (the part after watch?v=).
   If there is no cover image, the YouTube thumbnail is used, then a colored title tile.
@@ -20,6 +20,7 @@ window.PROJECTS = [
   {
     slug: "ross",
     title: "ROSS",
+    coverAlt: "Malcolm holding the first-place check for ROSS",
     cat: "software",
     kind: "AI hackathon",
     dates: "Oct 2026",
@@ -38,7 +39,11 @@ window.PROJECTS = [
     ],
     stack: ["Node.js", "Claude API", "SQLite", "Tesseract OCR", "Clio API", "Docker"],
     videos: [],
-    images: [],
+    images: [
+      { src: "ross-2.jpg", alt: "The ROSS team in front of the Law-Di-Gras backdrop" },
+      { src: "ross-3.jpg", alt: "The team building ROSS during the hackathon" },
+      { src: "ross-4.jpg", alt: "The team receiving the first-place check on stage" }
+    ],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/ROSS" }]
   },
   {
@@ -63,7 +68,10 @@ window.PROJECTS = [
     ],
     stack: ["Python", "PyTorch", "Faster R-CNN", "Slurm", "DDP", "WebDataset", "OpenCV", "pycocotools"],
     videos: [],
-    images: [],
+    images: [
+      { src: "synthetic-data-research-2.png", alt: "Study design: data standardization, synthetic pre-training on YOLOv8, YOLOv10 and Faster R-CNN, then fine-tuning on 10 to 100 percent real data" },
+      { src: "synthetic-data-research-3.jpg", alt: "Sample frames from the three synthetic datasets: Synscapes, UrbanSyn and RealDriveSim" }
+    ],
     links: []
   },
   {
@@ -88,6 +96,7 @@ window.PROJECTS = [
   {
     slug: "project-souls",
     title: "Project Souls",
+    coverAlt: "A red rock canyon under a giant ribcage in Project Souls",
     cat: "games",
     kind: "Game AI",
     dates: "Mar – May 2026",
@@ -105,7 +114,9 @@ window.PROJECTS = [
     ],
     stack: ["Unity", "C#", "Llama 3.1", "RAG", "Groq API", "Finite state machines"],
     videos: [],
-    images: [],
+    images: [
+      { src: "project-souls-2.jpg", alt: "A ruined stone archway glowing with lava in Project Souls" }
+    ],
     links: [{ label: "Code on GitHub", href: "https://github.com/MalcolmZyx/Souls-Game" }]
   },
   {

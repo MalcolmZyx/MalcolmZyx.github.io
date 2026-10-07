@@ -65,8 +65,8 @@ Most of these need no code changes, just the right file name.
 
 | What | Save as | Notes |
 |---|---|---|
-| Project cover (grid thumbnail and first carousel slide) | `assets/images/projects/<slug>.jpg` | 16:9, at least 1280×720. Appears automatically |
-| Extra carousel images | `assets/images/projects/<slug>-2.jpg`, `-3.jpg`, ... | Also add each to the project's `images` list in `projects.js` with a short description (`alt`) |
+| Project cover (grid thumbnail and first carousel slide) | `assets/images/projects/<slug>.jpg` (or `.png`, `.webp`) | 16:9 looks best. The name must match the slug exactly. Appears automatically |
+| Extra carousel images | `assets/images/projects/<slug>-2.jpg`, `-3.jpg`, ... | **Not automatic:** add each one to the project's `images` list in `projects.js` with a short description (`alt`), or it won't show |
 | Demo video | YouTube | Add the video ID (the part after `watch?v=`) to the project's `videos` list in `projects.js` |
 | Hover preview (optional) | `assets/images/projects/<slug>-preview.mp4` | Silent, under 10 seconds, under 5 MB. Plays when hovering the card |
 | Company or school logo | `assets/images/experience/<name>.svg` or `.png` | Replaces the colored monogram automatically. Names used: `healthspaniq`, `villagecore`, `csusm`, `aws`, `thecoderschool`, `master-sports` |
@@ -76,7 +76,7 @@ Most of these need no code changes, just the right file name.
 
 Project slugs: `ross`, `ai-engineering-challenge`, `zombie-trail`, `synthetic-data-research`, `project-souls`, `wildfire-predictor`, `constructive-criticism-classifier`, `youtube-performance-analyzer`, `codez-ide`, `financial-data-automation`, `google-ads-sales-analysis`, `tcp-chat-system`, `trench-runner`.
 
-Before uploading photos, remove location data and keep personal details (phone number, address) out of anything public.
+Keep images under about 1600 px on the long side and 500 KB, so the page loads fast (phone photos are often 4000 px and several MB). Before uploading photos, remove location data and keep personal details (phone number, address) out of anything public.
 
 ## Preview locally
 
