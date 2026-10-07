@@ -42,7 +42,7 @@
       ? `<span class="thumb-count">${ICON.photos}${mediaCount(p)}</span>`
       : "";
     return `<span class="thumb"><span class="thumb-art ${esc(p.cat)}" aria-hidden="true">${esc(p.title)}</span>` +
-      `<img src="${IMG_DIR}${esc(p.slug)}.jpg" alt="" loading="lazy" decoding="async"${yt} data-fallback>` +
+      `<img src="${IMG_DIR}${esc(p.slug)}.jpg" alt="" loading="lazy" decoding="async"${yt} data-fallback data-cover>` +
       `${badge}${count}</span>`;
   }
 
@@ -55,6 +55,11 @@
       return;
     }
     if (img.hasAttribute("data-optional")) return img.remove();
+    // Project covers: <slug>.jpg, then .png, then .webp.
+    if (img.hasAttribute("data-cover")) {
+      const next = { jpg: "png", png: "webp" }[img.src.split(".").pop()];
+      if (next) return void (img.src = img.src.replace(/\.\w+$/, "." + next));
+    }
     if (!img.hasAttribute("data-fallback")) return;
     const yt = img.dataset.youtube;
     if (yt && !img.dataset.triedYoutube) {
@@ -150,14 +155,14 @@
         `<img src="https://i.ytimg.com/vi/${esc(s.id)}/maxresdefault.jpg" alt="" data-fallback data-youtube="${esc(s.id)}">` +
         `<span class="play-icon">${ICON.play.replace('fill="currentColor"', 'fill="#fff" width="28" height="28"')}</span></button></li>`;
     }
-    return `<li class="slide"><img src="${esc(s.src)}" alt="${esc(s.alt)}" data-fallback></li>`;
+    return `<li class="slide"><img src="${esc(s.src)}" alt="${esc(s.alt)}" data-fallback${s.cover ? " data-cover" : ""}></li>`;
   }
 
   function stripHTML(s, i) {
     const img = s.type === "video" ? `https://i.ytimg.com/vi/${esc(s.id)}/mqdefault.jpg` : esc(s.src);
     const play = s.type === "video" ? `<span class="strip-play">${ICON.play}</span>` : "";
     const label = s.type === "video" ? s.label : `Image ${i + 1}`;
-    return `<li><button type="button" data-slide="${i}" aria-label="Show ${esc(label)}"><img src="${img}" alt="">${play}</button></li>`;
+    return `<li><button type="button" data-slide="${i}" aria-label="Show ${esc(label)}"><img src="${img}" alt=""${s.cover ? " data-cover" : ""}>${play}</button></li>`;
   }
 
   function listHTML(items, cls) {
