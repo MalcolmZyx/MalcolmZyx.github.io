@@ -26,7 +26,7 @@ MalcolmZyx.github.io/
 │   ├── js/main.js               Project grid, filters, project panel and carousel
 │   ├── files/                   Downloads: malcolm-zartman-resume.pdf
 │   ├── icons/
-│   │   ├── favicon.svg
+│   │   ├── favicon.svg          Browser tab icon (favicon.ico in the root and apple-touch-icon.png are copies)
 │   │   └── tech/                Tool icons used in Skills (from Simple Icons)
 │   └── images/
 │       ├── profile/             headshot.jpg (original), headshot-400/800.webp (used on the site)
