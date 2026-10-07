@@ -69,7 +69,7 @@ window.PROJECTS = [
     stack: ["Python", "PyTorch", "Faster R-CNN", "Slurm", "DDP", "WebDataset", "OpenCV", "pycocotools"],
     videos: [],
     images: [
-      { src: "synthetic-data-research-2.png", alt: "Study design: data standardization, synthetic pre-training on YOLOv8, YOLOv10 and Faster R-CNN, then fine-tuning on 10 to 100 percent real data" },
+      { src: "synthetic-data-research-2.jpg", alt: "Study design: data standardization, synthetic pre-training on YOLOv8, YOLOv10 and Faster R-CNN, then fine-tuning on 10 to 100 percent real data" },
       { src: "synthetic-data-research-3.jpg", alt: "Sample frames from the three synthetic datasets: Synscapes, UrbanSyn and RealDriveSim" }
     ],
     links: []
