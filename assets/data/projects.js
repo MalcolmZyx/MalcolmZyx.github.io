@@ -117,7 +117,7 @@ window.PROJECTS = [
       "Won 3 of 4 course awards at demo day: technical excellence, best art and best overall game."
     ],
     stack: ["Unity", "C#", "Llama 3.1", "RAG", "Groq API", "Finite state machines"],
-    videos: ["PkfQ0bkucdI"],
+    videos: [],
     images: [
       { src: "project-souls-2.jpg", alt: "The den of the final Boss in Project Souls" }
     ],
